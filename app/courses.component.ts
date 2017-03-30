@@ -2,7 +2,21 @@ import {Component} from 'angular2/core'
 
 @Component({
   selector: 'courses',
-  template: '<h2>Courses</h2>'
+  template: `
+    <h2> Courses </h2>
+    {{ title }}  
+    <ul>
+      <li *ngFor="#course of courses">
+        {{ course }}
+      </li> 
+    </ul>
+    `
 })
 
-export class CoursesComponent {}
+export class CoursesComponent {
+  title = "The title of courses page";
+  courses = ["Course1", "Course2", "Course3"];
+}
+
+// to render title, we use {{}}, we call it Interpolation
+// #coursea : it's a way to declare a local variable in our template
