@@ -1,2 +1,54 @@
 # start-Angular-2
 A Single Page Application using Angular 2.0 and TypeScript
+
+Angular 2:
+- Angular 2 is compatible with diffrent languages
+  - one of the biggest changes with Angualr 2 is multi language support
+    - Dart
+    - TypeScript
+    - ES6
+    - ES5
+- It has way less concepts to learn than Angular 1.x
+- HTMl syntax is lighter and does not have any ng- prefixes
+- It uses a new change detection mechanism ( with the help pf Zone.js) that removes the need for $scope.$apply() or $timeout workarounds from 1.x
+- Writing directives was complex in Angular 1.0 - it becomes much easier in Angular 2, where directives are called components.
+- Scopes are bindings are also easier to understand.
+- it is much faster than 1 ( 3 to 5 times faster)
+- It's a brand new code base - Angular 1 started in 2008
+- Better caching and pre-compilation of templates
+- The new component router is both, more powerful and more flexible
+- Simpler APIs and learning curve
+- Plays well with Angular 1.x
+
+
+
+- Create a new component: courses.component.ts
+
+```
+import {Component} from 'angular2/core';  // we call {Component} a decorator. Decorators are function so we need to call them.
+
+@Component({
+  selector: 'courses', 
+  template: '<h2>This are my Courses</h2>' 
+})
+
+export class CoursesComponent {}
+```
+
+- Using Components:
+
+```
+import {Component} from 'angular2/core';
+import {CoursesComponent} from './courses.component'
+@Component({
+    selector: 'my-app',
+    template: '<h1>My First Angular 2 App</h1><courses></courses>',
+    directives: [CoursesComponent] // it's an array, we need to specifiy any component/directive that we used inside this template
+})
+export class AppComponent { }
+```
+
+- Directive: a class that allows us to extend or control Document Object Model. we can define:
+  - custom attribute directive
+  - custom element directive
+  - Every compoentn is a directive. the diffrence is that component has a template and directive doesn't.
