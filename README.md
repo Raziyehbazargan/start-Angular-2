@@ -167,7 +167,11 @@ export class CoursesComponent {
 }
 ```
 
-- Two-way binding :
+- Two-way binding : 
+[(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. Data flow in both directions:
+- from the property to the textbox;
+- and from the textbox back to the property.
+
 ```
   <div>
     <label>name: </label>
