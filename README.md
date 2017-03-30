@@ -111,3 +111,58 @@ export class CoursesComponent {
 }
 
 ```
+
+
+- Directive: it's just a class that has that has the directive decorator.
+
+```
+import {Directive, ElementRef, Renderer} from 'angular2/core';
+
+@Directive({
+  selector: '[authoGrow]',
+  host: {
+    '(focus)': 'onFocus()',
+    '(blur)': 'onBlur()'
+  }
+})
+
+export class AuthoGrowDirective {
+
+  constructor(private el: ElementRef, private renderer: Renderer) {
+  }
+  onfocus() {
+    this.renderer.setElementStyle(this.el.nativeElement, 'width', '200')
+  }
+
+  onBlur() {
+    this.renderer.setElementStyle(this.el.nativeElement, 'width', '120')
+  }
+}
+```
+```
+import {Component} from 'angular2/core'
+import {CourseService} from './course.service';
+import {AuthoGrowDirective} from './auto-grow.directive';
+
+@Component({
+  selector: 'courses',
+  template: `
+    <h2> Courses </h2>
+    {{ title }}  
+    <input type="text authoGrow />
+    <ul>
+      <li *ngFor="#course of courses"> {{ course }} </li> 
+    </ul>
+    `,
+    providers: [CourseService, AuthoGrowDirective]
+})
+
+export class CoursesComponent {
+  title = "The title of courses page";
+  courses;
+
+  constructor(courseService: CourseService) {
+     this.courses = courseService.getCourse();
+  }
+}
+```
