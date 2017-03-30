@@ -171,6 +171,7 @@ export class CoursesComponent {
 [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. Data flow in both directions:
 - from the property to the textbox;
 - and from the textbox back to the property.
+- NgModel is a valid Angular directive, it isn't available by default. It belongs to the optional FormsModule. You must opt-in to using that module. ``` import { FormsModule }   from '@angular/forms'; // <-- NgModel lives ```
 
 ```
   <div>
