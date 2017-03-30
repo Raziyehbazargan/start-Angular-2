@@ -48,7 +48,27 @@ import {CoursesComponent} from './courses.component'
 export class AppComponent { }
 ```
 
+
 - Directive: a class that allows us to extend or control Document Object Model. we can define:
   - custom attribute directive
   - custom element directive
   - Every compoentn is a directive. the diffrence is that component has a template and directive doesn't.
+
+
+- Template:
+```
+import {Component} from 'angular2/core'
+
+@Component({
+  selector: 'courses',
+  template: `
+    <h2>Courses</h2>
+    {{ title }}  // to render title, we use {{}}, we call it Interpolation
+    `
+})
+
+export class CoursesComponent {
+  title: string = "The title of courses page";
+}
+
+```
