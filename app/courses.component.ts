@@ -6,9 +6,7 @@ import {CourseService} from './course.service';
     <h2> Courses </h2>
     {{ title }}  
     <ul>
-      <li *ngFor="#course of courses">
-        {{ course }}
-      </li> 
+      <li *ngFor="#course of courses"> {{ course }} </li> 
     </ul>
     `,
     providers: [CourseService]
