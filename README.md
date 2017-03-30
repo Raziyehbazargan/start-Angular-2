@@ -20,7 +20,7 @@ Angular 2:
 - Simpler APIs and learning curve
 - Plays well with Angular 1.x
 
-
+ Note: The double curly braces are Angular's interpolation binding syntax.
 
 - Create a new component: courses.component.ts
 
