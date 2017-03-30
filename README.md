@@ -166,3 +166,11 @@ export class CoursesComponent {
   }
 }
 ```
+
+- Two-way binding :
+```
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name"> // Two-way binding
+  </div>
+```
