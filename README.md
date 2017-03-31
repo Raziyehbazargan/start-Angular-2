@@ -179,3 +179,5 @@ export class CoursesComponent {
     <input [(ngModel)]="hero.name" placeholder="name"> // Two-way binding
   </div>
 ```
+
+- Multiple Components (Master / detail):
