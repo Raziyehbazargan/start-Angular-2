@@ -130,7 +130,7 @@ export class AuthoGrowDirective {
 
   constructor(private el: ElementRef, private renderer: Renderer) {
   }
-  onfocus() {
+  onFocus() {
     this.renderer.setElementStyle(this.el.nativeElement, 'width', '200')
   }
 
