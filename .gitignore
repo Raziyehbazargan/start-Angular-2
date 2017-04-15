@@ -3,3 +3,4 @@ app/*.*.map
 app/*.js
 *.js.map
 .DS_Store
+*.js
