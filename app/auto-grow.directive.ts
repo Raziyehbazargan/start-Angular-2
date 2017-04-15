@@ -1,8 +1,8 @@
 //Custom Directive
 
 import {Directive, ElementRef, Renderer} from 'angular2/core';
-//ElementRef: gives us access to host element 
-//Render: a service which we use to modify that Element
+//ElementRef: gives us access to the host element, for instance input element
+//Render: a service which we use to modify that Element, for instance changing width of input element
 @Directive({
     //css selector - if an element has an attribute 'autoGrow', this directive is going to be apply on that element
   selector: '[authoGrow]',
