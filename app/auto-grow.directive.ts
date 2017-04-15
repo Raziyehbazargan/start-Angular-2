@@ -1,8 +1,12 @@
 import {Directive, ElementRef, Renderer} from 'angular2/core';
-
+//ElementRef: gives us access to host element 
+//Render: a service which we use to modify that Element
 @Directive({
+    //css selector - if an element has an attribute 'autoGrow', this directive is going to be apply on that element
   selector: '[authoGrow]',
+    //host: we use host to subscribe to events from this element
   host: {
+    // name of event: (focus), onFocus() name of method
     '(focus)': 'onFocus()',
     '(blur)': 'onBlur()'
   }
