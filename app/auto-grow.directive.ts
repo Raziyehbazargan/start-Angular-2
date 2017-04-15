@@ -1,3 +1,5 @@
+//Custom Directive
+
 import {Directive, ElementRef, Renderer} from 'angular2/core';
 //ElementRef: gives us access to host element 
 //Render: a service which we use to modify that Element
