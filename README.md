@@ -1,7 +1,7 @@
 # start-Angular-2
 A Single Page Application using Angular 2.0 and TypeScript
 
-Angular 2:
+Angular 2: 
 - Angular 2 is compatible with diffrent languages
   - one of the biggest changes with Angualr 2 is multi language support
     - Dart
