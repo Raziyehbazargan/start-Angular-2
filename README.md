@@ -165,24 +165,27 @@ export class CoursesComponent {
      this.courses = courseService.getCourse();
   }
 }
+
 ```
+
 - Bindings:
+
   - Property Binding 
   
-  ```
+```
   @Component({
-  selector: 'my-app',
-  template: '
-    <h2> Courses </h2>{{ title }}'
-})
+    selector: 'my-app',
+    template: '<h2> Courses </h2>{{ title }}'
+   })
+   
 export class CoursesComponent {
   title = "The title of courses page";
   
-  ```
+ ```
   
   - Class Binding
  
-   ```
+```
   @Component({
   selector: 'my-app',
   template: '
@@ -191,9 +194,22 @@ export class CoursesComponent {
 export class CoursesComponent {
   isActive = true;
   
-  ```
+ ```
   
   - Style Binding
+  
+ ```
+  @Component({
+  selector: 'my-app',
+  template: '
+    <button class="btn btn-primary"
+        [style.backgroundColor]="isActive? 'blue': 'gray'">Submit</button>'
+})
+export class CoursesComponent {
+  isActive = true;
+  
+ ```
+ 
   - Event Binding
   
 - Two-way binding : 
