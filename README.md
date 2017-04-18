@@ -212,6 +212,17 @@ export class CoursesComponent {
  
   - Event Binding
   
+ ```
+  @Component({
+  selector: 'my-app',
+  template: '
+    <button (click)="onClick()">Submit</button>'   // or on-click="onClick()"
+})
+export class CoursesComponent {
+  }
+  
+ ```
+ 
 - Two-way binding : 
 [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. Data flow in both directions:
 - from the property to the textbox;
