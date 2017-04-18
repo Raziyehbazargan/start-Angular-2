@@ -172,15 +172,27 @@ export class CoursesComponent {
   ```
   @Component({
   selector: 'my-app',
-  template: `
-    <h2> Courses </h2>
-    {{ title }}  
-    `
+  template: '
+    <h2> Courses </h2>{{ title }}'
 })
 export class CoursesComponent {
   title = "The title of courses page";
+  
   ```
+  
   - Class Binding
+ 
+   ```
+  @Component({
+  selector: 'my-app',
+  template: '
+    <button class="btn btn-primary" [class.active]="isActive">Submit</button>'
+})
+export class CoursesComponent {
+  isActive = true;
+  
+  ```
+  
   - Style Binding
   - Event Binding
   
