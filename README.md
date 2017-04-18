@@ -219,7 +219,10 @@ export class CoursesComponent {
     <button (click)="onClick()">Submit</button>'   // or on-click="onClick()"
 })
 export class CoursesComponent {
+  onClick() {
+    console.log('clicked');
   }
+}
   
  ```
  
