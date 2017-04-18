@@ -166,7 +166,24 @@ export class CoursesComponent {
   }
 }
 ```
-
+- Bindings:
+  - Property Binding 
+  
+  ```
+  @Component({
+  selector: 'my-app',
+  template: `
+    <h2> Courses </h2>
+    {{ title }}  
+    `
+})
+export class CoursesComponent {
+  title = "The title of courses page";
+  ```
+  - Class Binding
+  - Style Binding
+  - Event Binding
+  
 - Two-way binding : 
 [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. Data flow in both directions:
 - from the property to the textbox;
