@@ -1,7 +1,7 @@
 # start-Angular-2
 A Single Page Application using Angular 2.0 and TypeScript
 
-Angular 2: 
+Angular 2:
 - Angular 2 is compatible with diffrent languages
   - one of the biggest changes with Angualr 2 is multi language support
     - Dart
@@ -28,8 +28,8 @@ Angular 2:
 import {Component} from 'angular2/core';  // we call {Component} a decorator. Decorators are function so we need to call them.
 
 @Component({
-  selector: 'courses', 
-  template: '<h2>This are my Courses</h2>' 
+  selector: 'courses',
+  template: '<h2>This are my Courses</h2>'
 })
 
 export class CoursesComponent {}
@@ -91,11 +91,11 @@ import {CourseService} from './course.service';
   selector: 'courses',
   template: `
     <h2> Courses </h2>
-    {{ title }}  
+    {{ title }}
     <ul>
       <li *ngFor="#course of courses">
         {{ course }}
-      </li> 
+      </li>
     </ul>
     `,
     providers: [CourseService]
@@ -148,10 +148,10 @@ import {AuthoGrowDirective} from './auto-grow.directive';
   selector: 'courses',
   template: `
     <h2> Courses </h2>
-    {{ title }}  
+    {{ title }}
     <input type="text authoGrow />
     <ul>
-      <li *ngFor="#course of courses"> {{ course }} </li> 
+      <li *ngFor="#course of courses"> {{ course }} </li>
     </ul>
     `,
     providers: [CourseService, AuthoGrowDirective]
@@ -170,21 +170,21 @@ export class CoursesComponent {
 
 - Bindings:
 
-  - Property Binding 
-  
+  - Property Binding
+
 ```
   @Component({
     selector: 'my-app',
     template: '<h2> Courses </h2>{{ title }}'
    })
-   
+
 export class CoursesComponent {
   title = "The title of courses page";
-  
+
  ```
-  
+
   - Class Binding
- 
+
 ```
   @Component({
   selector: 'my-app',
@@ -193,11 +193,11 @@ export class CoursesComponent {
 })
 export class CoursesComponent {
   isActive = true;
-  
+
  ```
-  
+
   - Style Binding
-  
+
  ```
   @Component({
   selector: 'my-app',
@@ -207,26 +207,35 @@ export class CoursesComponent {
 })
 export class CoursesComponent {
   isActive = true;
-  
+
  ```
- 
+
   - Event Binding
-  
+
  ```
   @Component({
   selector: 'my-app',
   template: '
-    <button (click)="onClick()">Submit</button>'   // or on-click="onClick()"
+    <div (click)="onDivClick()">
+    <button (click)="onClick($event)">Submit</button>'
+    </div>
+     // or on-click="onClick()"
 })
 export class CoursesComponent {
-  onClick() {
-    console.log('clicked');
+
+  onDivClick() {
+    console.log("Handled by Div");
+  }
+
+  onClick($event) {
+    $event.stopPropagation();
+    console.log('clicked', $event);
   }
 }
-  
+
  ```
- 
-- Two-way binding : 
+
+- Two-way binding :
 [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. Data flow in both directions:
 - from the property to the textbox;
 - and from the textbox back to the property.
