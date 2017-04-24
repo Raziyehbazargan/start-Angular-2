@@ -33,6 +33,10 @@ System.register(['angular2/core', './courses.component', './author.component', '
                         title: "Title",
                         isFavorite: true
                     };
+                    this.tweet = {
+                        totalLikes: 10,
+                        iLike: false
+                    };
                 }
                 AppComponent.prototype.onFavoriteChange = function ($event) {
                     console.log($event);
@@ -40,7 +44,7 @@ System.register(['angular2/core', './courses.component', './author.component', '
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>My First Angular 2 App</h1>\n    <courses></courses>\n    <authors></authors>\n    <favorite [isFavorite]=\"post.isFavorite\" (change)=\"onFavoriteChange()\"></favorite>",
+                        template: "\n    <h1>My First Angular 2 App</h1>\n    <courses></courses>\n    <authors></authors>\n    <favorite [isFavorite]=\"post.isFavorite\" (change)=\"onFavoriteChange()\"></favorite>\n    <like [totalLikes]=\"tweet.totalLikes\"></like>",
                         directives: [courses_component_1.CoursesComponent, author_component_1.AuthorsComponent, favorite_component_1.FavoriteComponent]
                     }), 
                     __metadata('design:paramtypes', [])
